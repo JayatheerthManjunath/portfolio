@@ -1,0 +1,545 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#101827;
+
+    color:#1f1f1f;
+
+    font-family:Verdana, Geneva, sans-serif;
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+
+/* ---------- COLORS ---------- */
+
+:root{
+
+    --bg:#101827;
+
+    --panel:#F7F3E8;
+
+    --primary:#4F46E5;
+
+    --primary-dark:#4338CA;
+
+    --border:#4A4A4A;
+
+    --gold:#C8A95B;
+
+    --text:#1D1D1D;
+
+    --shadow:4px 4px 0 rgba(0,0,0,.35);
+
+}
+
+
+/* ---------- LINKS ---------- */
+
+a{
+
+    text-decoration:none;
+
+    color:var(--primary);
+
+}
+
+a:hover{
+
+    color:var(--primary-dark);
+
+}
+
+
+/* ---------- NAVBAR ---------- */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 10%;
+
+    background:var(--panel);
+
+    border-bottom:3px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+.logo{
+
+    font-family:"Libre Baskerville",serif;
+
+    font-size:1.4rem;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:18px;
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    color:var(--text);
+
+    font-weight:bold;
+
+    padding:8px 14px;
+
+    border:2px solid transparent;
+
+    transition:.25s;
+
+}
+
+.nav-links a:hover{
+
+    border:2px solid var(--border);
+
+    background:white;
+
+    transform:translateY(-2px);
+
+}
+
+.hamburger{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:70px 20px;
+
+}
+
+.window{
+
+    width:min(850px,95%);
+
+    background:var(--panel);
+
+    border:3px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    padding:55px;
+
+    text-align:center;
+
+}
+
+.window h1{
+
+    font-family:"Libre Baskerville",serif;
+
+    font-size:4rem;
+
+    margin-bottom:25px;
+
+}
+
+.window p{
+
+    font-size:1.2rem;
+
+    margin-bottom:12px;
+
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.hero-buttons{
+
+    margin-top:35px;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    padding:14px 30px;
+
+    margin:10px;
+
+    border:3px solid var(--border);
+
+    background:white;
+
+    color:var(--text);
+
+    font-weight:bold;
+
+    transition:.2s;
+
+    box-shadow:3px 3px 0 rgba(0,0,0,.2);
+
+}
+
+.button:hover{
+
+    transform:translateY(-3px);
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.button:active{
+
+    transform:translateY(2px);
+
+    box-shadow:none;
+
+}
+
+.secondary{
+
+    background:var(--gold);
+
+}
+
+/* ---------- CONTENT ---------- */
+
+.content-section{
+
+    width:100%;
+
+    margin:80px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    padding:0 20px;
+
+}
+
+.content-section .window{
+
+    width:min(850px,95%);
+
+}
+
+.content-section h2{
+
+    width:min(850px,95%);
+
+    margin-bottom:25px;
+
+    color:#1D1D1D;
+
+    font-family:"Libre Baskerville", serif;
+
+    font-size:2.3rem;
+
+}
+
+/* ---------- PROJECTS ---------- */
+
+.project-grid{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:stretch;
+
+    gap:30px;
+
+    flex-wrap:nowrap;
+
+    margin-top:30px;
+
+}
+
+.project-card{
+
+    width:300px;
+
+    background:var(--panel);
+
+    border:3px solid var(--border);
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+    transition:.25s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.project-card h3{
+
+    margin-bottom:15px;
+
+    font-family:"Libre Baskerville",serif;
+
+}
+
+.project-card p{
+
+    margin-bottom:18px;
+
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer{
+
+    margin-top:100px;
+
+    padding:40px;
+
+}
+
+.footer-window{
+
+    width:min(900px,95%);
+
+    margin:auto;
+
+    background:var(--panel);
+
+    border:3px solid var(--border);
+
+    text-align:center;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* ---------- STAR BACKGROUND ---------- */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.18;
+
+    background-image:
+
+    radial-gradient(circle at 20% 30%,white 2px,transparent 2px),
+
+    radial-gradient(circle at 70% 20%,white 1px,transparent 1px),
+
+    radial-gradient(circle at 40% 80%,white 2px,transparent 2px),
+
+    radial-gradient(circle at 80% 70%,white 1px,transparent 1px),
+
+    radial-gradient(circle at 10% 60%,white 1px,transparent 1px);
+
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:850px){
+
+.nav-links{
+
+    position:absolute;
+
+    top:82px;
+
+    left:0;
+
+    width:100%;
+
+    flex-direction:column;
+
+    background:var(--panel);
+
+    display:none;
+
+    padding:25px;
+
+    border-bottom:3px solid var(--border);
+
+}
+
+.nav-links.active{
+
+    display:flex;
+
+}
+
+.hamburger{
+
+    display:block;
+
+}
+
+.window{
+
+    padding:35px;
+
+}
+
+.window h1{
+
+    font-size:2.7rem;
+
+}
+
+.content-section h2{
+
+    font-size:2rem;
+
+}
+
+}
+
+.section-title{
+
+    color:white;
+
+}
+
+.resume-section{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:70px 20px;
+
+}
+
+.resume-window{
+
+    width:min(1000px,95%);
+
+    background:var(--panel);
+
+    border:3px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+.window-title{
+
+    background:#e5e0d2;
+
+    border-bottom:3px solid var(--border);
+
+    padding:18px 25px;
+
+    font-family:"Libre Baskerville", serif;
+
+    font-size:1.5rem;
+
+}
+
+.resume-toolbar{
+
+    display:flex;
+
+    gap:15px;
+
+    padding:20px;
+
+    border-bottom:2px solid #c7c1b4;
+
+}
+
+.resume-viewer{
+
+    padding:20px;
+
+}
+
+.resume-viewer iframe{
+
+    width:100%;
+
+    height:900px;
+
+    border:2px solid var(--border);
+
+    background:white;
+
+}
